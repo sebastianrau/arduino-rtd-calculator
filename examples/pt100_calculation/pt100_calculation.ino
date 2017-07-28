@@ -1,5 +1,5 @@
 
-#include <PTCcalc.h>
+#include <RTDcalc.h>
 
 
 double    mesurredResistance0 = 109.73,   // 25 degree celsius
@@ -16,7 +16,7 @@ void setup ( void ) {
   Serial.begin(115200);
 
   
-  ptcCalc1.setR0(R0_PT1000);    //Use constructor or this set Method.
+  ptcCalc1.setR0(R0_PT1000);    //Use constructor or this set Method to set R0.
 
   temperature0 = ptcCalc0.calcTemperatureCelsius(mesurredResistance0);
   temperature1 = ptcCalc1.calcTemperatureCelsius(mesurredResistance1);
